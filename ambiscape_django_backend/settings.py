@@ -79,7 +79,7 @@ DATABASES = {
                 '-01.xc17a.mongodb.net:27017,'
                 'cluster0-shard-00-02.xc17a.mongodb.net:27017/ambiscape?ssl=true&replicaSet=atlas-10qz81-shard-0'
                 '&authSource=admin&retryWrites=true&w=majority',
-        'USER': 'tesseract97',
+        'USER': 'tesseract',
         'PASSWORD': '0722velociraptor'
     }
 }
