@@ -15,7 +15,6 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
@@ -26,7 +25,6 @@ SECRET_KEY = 'k1a6-*5^%^c7w)(5&ls@*znj1lsh4et8)3*$is$=)v2_47y-1_'
 DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -70,17 +68,21 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'ambiscape_django_backend.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'engine': 'djongo',
+        'NAME': 'ambiscape',
+        'HOST': 'mongodb://tesseract:0722velociraptor@cluster0-shard-00-00.xc17a.mongodb.net:27017cluster0-shard-00'
+                '-01.xc17a.mongodb.net:27017,'
+                'cluster0-shard-00-02.xc17a.mongodb.net:27017/ambiscape?ssl=true&replicaSet=atlas-10qz81-shard-0'
+                '&authSource=admin&retryWrites=true&w=majority',
+        'USER': 'tesseract97',
+        'PASSWORD': '0722velociraptor'
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -100,7 +102,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -113,7 +114,6 @@ USE_I18N = True
 USE_L10N = True
 
 USE_TZ = True
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
